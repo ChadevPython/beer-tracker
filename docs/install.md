@@ -2,9 +2,12 @@
 
 ## Requirements
 
-- [Python 2.7](https://www.python.org/)
-- [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+- [Python 3.5.0](https://www.python.org/)
+- [Pyenv](https://github.com/yyuu/pyenv)
+- [Pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv)
 - [Pip](https://pip.pypa.io/en/latest/installing.html)
+## Optional
+- [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 
 ## For local development, set dev environment variable
 
@@ -22,11 +25,14 @@ git clone git@github.com:ChadevPython/beer-tracker.git
 copy/rename config/example-dev.py to config/dev.py
 this is where we store local config variables hidden from git
 
-# Create virtual environment
-virtualenv env
+# Set current directory python version
+pyenv local 3.5.0
 
-# Activate virtual environment
-. env/bin/activate
+# Create virtual environment
+pyenv virtualenv beer-tracker
+
+# Set current directory to beer-tracker virtual environment
+pyenv local beer-tracker
 
 # Install project dependencies
 pip install -r pip.txt
@@ -37,4 +43,10 @@ pip install -r pip.txt
 # Open web browser to localhost:5000
 open http://localhost:5000
 
+## Optional
+# Create virtual environment
+virtualenv env
+
+# Activate virtual environment
+. env/bin/activate
 ~~~

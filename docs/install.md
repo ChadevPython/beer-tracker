@@ -6,7 +6,8 @@
 - [Pyenv](https://github.com/yyuu/pyenv)
 - [Pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv)
 - [Pip](https://pip.pypa.io/en/latest/installing.html)
-## Optional
+
+ Optional
 - [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 
 ## For local development, set dev environment variable

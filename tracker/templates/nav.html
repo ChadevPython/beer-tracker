@@ -1,0 +1,28 @@
+% block nav
+<header class="menu">
+  <h1>Beer Tracker <small>app</small></h1>
+  <div class="container">
+    <a href="{{ url_for("GeneralView:index") }}">Beer Tracker</a>
+  </div>
+</header>
+
+% if current_user.is_authenticated
+  <header>
+    <div class="container">
+      <nav>
+        <a href="{{ url_for("user.profile") }}">{{ current_user }}</a>
+        <a href="{{ url_for("user.logout") }}">Signout</a>
+      </nav>
+    </div>
+  </header>
+% else
+  <header>
+    <div class="container">
+      <nav>
+        <a href="{{ url_for("user.login") }}">Login</a>
+      </nav>
+    </div>
+  </header>
+% endif
+
+% endblock

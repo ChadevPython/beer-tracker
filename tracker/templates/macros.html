@@ -1,0 +1,42 @@
+% macro render_field(field, placeholder=None, rows=None)
+  <div class="form-group {% if field.errors %}has-error has-feedback{% endif %}{% if placeholder %} with-placeholder{% endif %}">
+    {{ field.label(class="control-label") }}
+    % if placeholder
+      {{ field(class="form-control", placeholder=placeholder, rows=rows) }}
+    % else
+      {{ field(class="form-control", rows=rows) }}
+    % endif
+    % if field.errors
+      <ul class="errors">
+      % for error in field.errors
+        <li>
+          <i class="fa fa-times form-feedback"></i>
+          <span> {{ error }}</span>
+        </li>
+      % endfor
+      </ul>
+    % else
+      <p class="help-block">{{ field.description }}</p>
+    % endif
+  </div>
+% endmacro
+
+% macro render_error()
+  % with messages = get_flashed_messages(with_categories=true)
+    % if messages
+      % for category, message in messages
+      <div class="alert alert-{{ category }}" role="alert">
+        <div class="container">
+          <p class="alert__text"><h3>{{ message }}</h3></p>
+        </div>
+      </div>
+      % endfor
+    % endif
+  % endwith
+% endmacro
+
+% macro hidden_field(field, value)
+  <div class="hidden">
+    {{ field(class="form-control")}}
+  </div>
+% endmacro

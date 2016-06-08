@@ -31,6 +31,7 @@ pyenv local 3.5.0
 pyenv virtualenv beer-tracker
 
 # Set current directory to beer-tracker virtual environment
+# pyenv-virtualenv will automatically activate this environment
 pyenv local beer-tracker
 
 # Install project dependencies
@@ -41,8 +42,10 @@ pip install -r pip.txt
 
 # Open web browser to localhost:5000
 open http://localhost:5000
+~~~ 
 
 ## Optional
+~~~ sh
 # Create virtual environment
 virtualenv env
 

@@ -6,6 +6,7 @@
 - [Pyenv](https://github.com/yyuu/pyenv)
 - [Pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv)
 - [Pip](https://pip.pypa.io/en/latest/installing.html)
+- [Postgresql](https://www.postgresql.org/download/)
 - Optional [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 
 ## For local development, set dev environment variable

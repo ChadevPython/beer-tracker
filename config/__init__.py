@@ -16,7 +16,7 @@ if os.environ.get('ENVIRONMENT') == 'dev':
         raise EnvironmentError('Please create config/dev.py')
 else:
     # production server environment variables
-    import prod as config  # config/prod.py
+    import config.prod as config  # config/prod.py
     config.DEBUG = False
 
 required_config_vars = [

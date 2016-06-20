@@ -20,9 +20,9 @@ def logit(data):
             f.write(data)
             f.write('\n')
         if print_log:
-            print data
+            print(data)
     else:
-        print data
+        print(data)
 
 def send_email(to, subject, template, **kwargs):
     msg = Message(config.MAIL_SUBJECT_PREFIX + ' ' + subject,

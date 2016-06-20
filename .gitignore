@@ -68,3 +68,6 @@ target/
 # Local Node Modules
 node_modules/
 log.txt
+
+# JetBrains
+.idea/
